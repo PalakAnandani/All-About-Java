@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class NumOfYrs
+{
+	public static void main(String [] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the minutes:");
+		int min = sc.nextInt();
+		int year= 365*24*60; //days,hours,minutes (total number of minutes in year)
+		int totYrs= min/year;
+		int totDays= (min-(totYrs*year))/(24*60) ;
+		//  1000000000-(525600-(1902*
+		System.out.println("the total numbers of years is "+ totYrs + " and " +totDays+ " Days");
+	}
+}
