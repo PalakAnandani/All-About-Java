@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class EvenOddLen 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter the number : ");
+		int num = sc.nextInt();
+		int dup=num;
+		int count=0;
+		while (num>0)
+		{
+			count++;
+			num/=10;
+		} 
+		String newNum="";
+		if (count %2==0)
+		{
+			for (int i=dup ;i>0 ;i/=10 )
+			{
+				int rem = i%10;
+				if (rem%2!=0){
+					newNum= ++rem + newNum;
+				}else{
+					newNum= rem+ newNum;
+				}
+
+			}
+		}
+		else 
+		{
+			for (int i=dup;i>0 ;i/=10 )
+			{
+				int rem =i%10;
+				if (rem%2==0)
+				{
+					newNum= ++rem + newNum;
+				}else{
+					newNum= rem + newNum;
+				}
+			}
+		}
+		System.out.println(dup+ " : "+newNum);
+	}
+}
